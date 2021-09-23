@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <Button
+                android:id="@+id/square1"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:textSize="50sp"
+                android:text="1" />
+            <Button
+                android:id="@+id/square2"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_toEndOf="@id/square1"
+                android:textSize="50sp"
+                android:text="2" />
+            <Button
+                android:id="@+id/square3"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_toEndOf="@id/square2"
+                android:textSize="50sp"
+                android:text="3" />
+            <Button
+                android:id="@+id/square4"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_toEndOf="@id/square3"
+                android:textSize="50sp"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/square5"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square1"
+                android:textSize="50sp"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/square6"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square2"
+                android:layout_toEndOf="@id/square1"
+                android:textSize="50sp"
+                android:text="6" />
+            <Button
+                android:id="@+id/square7"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square3"
+                android:layout_toEndOf="@id/square6"
+                android:textSize="50sp"
+                android:text="7" />
+            <Button
+                android:id="@+id/square8"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square2"
+                android:layout_toEndOf="@id/square7"
+                android:textSize="50sp"
+                android:text="8" />
+            <Button
+                android:id="@+id/square9"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square5"
+
+                android:textSize="50sp"
+                android:text="9" />
+            <Button
+                android:id="@+id/square10"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square5"
+                android:layout_toEndOf="@id/square9"
+                android:textSize="50sp"
+                android:text="10" />
+            <Button
+                android:id="@+id/square11"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square5"
+                android:layout_toEndOf="@id/square10"
+                android:textSize="50sp"
+                android:text="11" />
+            <Button
+                android:id="@+id/square12"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square5"
+                android:layout_toEndOf="@id/square11"
+                android:textSize="50sp"
+                android:text="12" />
+            <Button
+                android:id="@+id/square13"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square9"
+
+                android:textSize="50sp"
+                android:text="13" />
+            <Button
+                android:id="@+id/square14"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square9"
+                android:layout_toEndOf="@id/square13"
+                android:textSize="50sp"
+                android:text="14" />
+            <Button
+                android:id="@+id/square15"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="10sp"
+                android:layout_below="@id/square9"
+                android:layout_toEndOf="@id/square14"
+                android:textSize="50sp"
+                android:text="15" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/resetButton"
+
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:text="RESET" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
