@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button [] buttons = new Button[17];
     private Button resetGame;
-
+    private int[] tiles ={1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17};
 
 
     @Override
@@ -33,7 +33,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
         buttons[16].setBackgroundColor(Color.TRANSPARENT);
+        generate15();
+        Log.i("text","oncreate");
 
+    }
+
+    public void generate15()
+    {
+        Random rand = new Random();
+        int count= 1;
+        int n = 15;
+        while(count!=14)
+        {
+
+
+            count++;
+        }
+        for(int i = 1; i < buttons.length;i++)
+        {
+            int randomNum = rand.nextInt(17-i);
+            buttons[i].setText(String.valueOf(randomNum));
+        }
 
     }
 
@@ -85,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.square15:
                 check(15);
-                Log.i("Text","check50");
+                //Log.i("Text","check50");
                 break;
             case R.id.square16:
                 check(16);
@@ -99,42 +119,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.i("Text","first");
 
 
-            if (square_num +1 < 17 &&String.valueOf(buttons[square_num + 1].getText()).equals("invisible")) {
+            if (square_num +1 < 17 && String.valueOf(buttons[square_num + 1].getTag()).equals("16")) {
                 Log.i("Text", "1");
                 buttons[square_num + 1].setText(buttons[square_num].getText());
+                buttons[square_num +1 ].setTag(buttons[square_num].getTag());
                 buttons[square_num + 1].setBackgroundColor(Color.GRAY);
 
                 buttons[square_num].setBackgroundColor(Color.TRANSPARENT);
-                buttons[square_num].setText("invisible");
+                buttons[square_num].setTag("16");
                 return;
             }
-            if (square_num-1 > 0 &&String.valueOf(buttons[square_num - 1].getText()).equals("invisible")) {
+            if (square_num-1 > 0 &&String.valueOf(buttons[square_num - 1].getTag()).equals("16")) {
                 Log.i("Text", "2");
                 buttons[square_num - 1].setText(buttons[square_num].getText());
+                buttons[square_num -1 ].setTag(buttons[square_num].getTag());
                 buttons[square_num - 1].setBackgroundColor(Color.GRAY);
 
                 buttons[square_num].setBackgroundColor(Color.TRANSPARENT);
-                buttons[square_num].setText("invisible");
+                buttons[square_num].setTag("16");
                 return;
 
             }
-                if (square_num +4 < 17 && String.valueOf(buttons[square_num + 4].getText()).equals("invisible")) {
+
+                if (square_num +4 < 17 && String.valueOf(buttons[square_num + 4].getTag()).equals("16")) {
                     Log.i("Text", "3");
                     buttons[square_num + 4].setText(buttons[square_num].getText());
+                    buttons[square_num +4 ].setTag(buttons[square_num].getTag());
                     buttons[square_num + 4].setBackgroundColor(Color.GRAY);
 
                     buttons[square_num].setBackgroundColor(Color.TRANSPARENT);
-                    buttons[square_num].setText("invisible");
+                    buttons[square_num].setTag("16");
                     return;
 
                 }
-        if (square_num -4 > -1 && String.valueOf(buttons[square_num - 4].getText()).equals("invisible")) {
+        if (square_num -4 > -1 && String.valueOf(buttons[square_num - 4].getTag()).equals("16")) {
             Log.i("Text", "4");
             buttons[square_num - 4].setText(buttons[square_num].getText());
+            buttons[square_num -4 ].setTag(buttons[square_num].getTag());
             buttons[square_num - 4].setBackgroundColor(Color.GRAY);
 
             buttons[square_num].setBackgroundColor(Color.TRANSPARENT);
-            buttons[square_num].setText("invisible");
+            buttons[square_num].setTag("16");
             return;
 
         }
