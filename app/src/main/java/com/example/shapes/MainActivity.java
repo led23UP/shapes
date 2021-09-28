@@ -2,6 +2,7 @@ package com.example.shapes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //loops through button array and "initialize" them to be ready to be clicked
         for(int i = 1; i < buttons.length;i++)
         {
@@ -265,7 +266,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     /**
      * Checks if the user has properly ordered the puzzle in 1-15 order
-     * Notifies the user of winnning by displaying appropriate text and changing background
+     * Notifies the user of winnning by changing background
      * to green.
      */
     public void checkWin()
@@ -289,6 +290,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //win notification
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.GREEN);
-            Toast.makeText(getApplicationContext(),"You won!",Toast.LENGTH_SHORT).show();
+
     }
 }
