@@ -51,11 +51,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttons[16].setBackgroundColor(Color.TRANSPARENT);
 
         //INIT GAME
-        //checks to see if the user wins by pure chance of the board initializing
-        checkWin();
+
+
         //randomize puzzle on app launch
         generate15();
-
+        //checks to see if the user wins by pure chance of the board initializing
+        checkWin();
         //because how generate15() works, you need to set the most bottom right invisible (no text)
         //at the beginning.
         //this needs to only happen once per application launch
@@ -266,7 +267,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     /**
      * Checks if the user has properly ordered the puzzle in 1-15 order
-     * Notifies the user of winnning by changing background
+     * Notifies the user of winnning by displaying text and changing background
      * to green.
      */
     public void checkWin()
@@ -290,6 +291,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //win notification
             View view = this.getWindow().getDecorView();
             view.setBackgroundColor(Color.GREEN);
-
+            Toast.makeText(getApplicationContext(),"You won!",Toast.LENGTH_SHORT).show();
     }
 }
